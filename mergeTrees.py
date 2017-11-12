@@ -13,9 +13,9 @@ class Solution(object):
         :rtype: TreeNode
         """
         # None: bool
-        if t1 == NULL:
+        if t1 == None:
             return t2
-        if t2 == NULL:
+        if t2 == None:
             return t1
         t1.val += t2.val
         mergeTrees(t1.left, t2.left)
