@@ -18,7 +18,7 @@ class Solution(object):
         if t2 == None:
             return t1
         t1.val += t2.val
-        mergeTrees(t1.left, t2.left)
-        mergeTrees(t1.right, t2.right)
+        t1.left = self.mergeTrees(t1.left, t2.left)
+        t1.right = self.mergeTrees(t1.right, t2.right)
         return t1
             
