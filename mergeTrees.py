@@ -12,3 +12,13 @@ class Solution(object):
         :type t2: TreeNode
         :rtype: TreeNode
         """
+        # None: bool
+        if t1 == None:
+            return t2
+        if t2 == Nnoe:
+            return t1
+        t1.val += t2.val
+        mergeTrees(t1.left, t2.left)
+        mergeTrees(t1.right, t2.right)
+        return t1
+            
